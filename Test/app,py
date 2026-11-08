@@ -1,0 +1,155 @@
+import os
+import numpy as np
+import pickle
+import matplotlib.pyplot as plt
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+SELF_FILE = os.path.join(SCRIPT_DIR, "self.text")
+NOTES_FILE = os.path.join(SCRIPT_DIR, "Notes.txt")
+
+MODEL_FILE = os.path.join(SCRIPT_DIR, "naive_bayes_brain.pkl")
+VECTORIZER_FILE = os.path.join(SCRIPT_DIR, "tfidf_vectorizer.pkl")
+
+# ========================================================
+# MODULE 1: DYNAMIC DATA ENGINE WITH FORCE DIAGNOSTICS
+# ========================================================
+def train_and_serialize_model():
+    trained_keywords = []
+    trained_answers = []
+    source_files = [SELF_FILE, NOTES_FILE]
+
+    print("\n🔍 --- SYSTEM FILE CHECK ---")
+    for file_path in source_files:
+        print(f"Checking path: {file_path}")
+        if not os.path.exists(file_path):
+            print(f"❌ FILE MISSING: Generating an empty placeholder file right now...")
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(f"placeholder: This is a placeholder for {os.path.basename(file_path)}\n")
+        
+        # Read the file content
+        file_lines_count = 0
+        valid_rows_count = 0
+        with open(file_path, "r", encoding="utf-8") as file:
+            for line in file:
+                file_lines_count += 1
+                if ":" in line:
+                    parts = line.split(":", 1)
+                    trained_keywords.append(parts[0].strip().lower())
+                    trained_answers.append(parts[1].strip())
+                    valid_rows_count += 1
+        
+        print(f"📄 File '{os.path.basename(file_path)}': Read {file_lines_count} raw lines. Found {valid_rows_count} valid key-value pairs.")
+
+    print("----------------------------")
+
+    if not trained_keywords:
+        print("\n❌ CRITICAL CRASH: Total data matrix is still empty!")
+        print("👉 Action Required: Open your text files and make sure your entries use a COLON (:).")
+        print("👉 Example: 'college: I study at Sutex Bank College.'")
+        return None, None, [], []
+
+    # Matrix Vectorization Transformation
+    vectorizer = TfidfVectorizer()
+    X_train = vectorizer.fit_transform(trained_keywords)
+    y_train = np.array(range(len(trained_keywords)))
+
+    # Fit the Multinomial Naive Bayes Probabilistic Model
+    classifier = MultinomialNB(alpha=1.0)
+    classifier.fit(X_train, y_train)
+
+    # Save models to persistent disk files
+    with open(MODEL_FILE, "wb") as f:
+        pickle.dump(classifier, f)
+    with open(VECTORIZER_FILE, "wb") as f:
+        pickle.dump(vectorizer, f)
+    
+    return classifier, vectorizer, trained_answers, trained_keywords
+
+# ========================================================
+# MODULE 2: LIVE CONFIDENCE VISUALIZATION CHART
+# ========================================================
+def generate_confidence_chart(labels, probabilities):
+    plt.figure(figsize=(10, 5))
+    probs_percentage = probabilities[0] * 100
+    bars = plt.bar(labels, probs_percentage, color='skyblue', edgecolor='black')
+    highest_idx = np.argmax(probs_percentage)
+    bars[highest_idx].set_color('#2ecc71')
+    plt.title("Naive Bayes Probabilistic Intent Matrix Distribution (%)", fontsize=12, fontweight='bold')
+    plt.xlabel("All Trained Keywords", fontsize=10)
+    plt.ylabel("Prediction Confidence Score (%)", fontsize=10)
+    plt.xticks(rotation=45, ha='right')
+    plt.ylim(0, 105)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()
+
+# ========================================================
+# MODULE 3: ACTIVE DEPLOYMENT APPLICATION RUNTIME LOOP
+# ========================================================
+if __name__ == "__main__":
+    print("🤖 Booting Secure Multi-File Offline ML Brain Core...")
+    
+    classifier, vectorizer, trained_answers, trained_keywords = train_and_serialize_model()
+
+    if classifier is None:
+        print("\n⚠️ Application Core halted due to missing text data entries. Fix text files and restart.")
+    else:
+        print("\n✅ SUCCESS: Training matrix compiled perfectly into vector arrays!")
+        while True:
+            print("\n------------------------------------------------------")
+            print("OPTIONS: 1. Chat with AI | 2. Inject New Data | 3. Exit")
+            print("------------------------------------------------------")
+            choice = input("Select Operation Code (1/2/3): ").strip()
+
+            if choice == "3":
+                print("Deactivating model state runtime instance. Goodbye!")
+                break
+
+            elif choice == "1":
+                print("\n🤖 AI Brain Chat Active. Type 'back' to return to menu.")
+                while True:
+                    user_input = input("\nYou: ").strip()
+                    if user_input.lower() == 'back':
+                        break
+                    if not user_input:
+                        continue
+
+                    user_vector = vectorizer.transform([user_input.lower()])
+                    probabilities = classifier.predict_proba(user_vector)
+                    predicted_index = np.argmax(probabilities)
+                    confidence = probabilities[0][predicted_index]
+
+                    if confidence > 0.12:
+                        print(f"🤖 Bot (Algorithm: MultinomialNB | Confidence: {confidence:.2f})")
+                        print("👉 " + trained_answers[predicted_index])
+                        
+                        view_chart = input("\n📊 View vector probability chart? (y/n): ").strip().lower()
+                        if view_chart == 'y':
+                            generate_confidence_chart(trained_keywords, probabilities)
+                    else:
+                        print(f"🤖 Bot (Confidence Low: {confidence:.2f})")
+                        print("👉 Prediction bounds missed. Rephrase query parameters.")
+
+            elif choice == "2":
+                print("\n📝 DATA INJECTION ROUTINE:")
+                print(f"Select Target Storage File:\n1. Personal (self.text)\n2. Academic Notes (Notes.txt)")
+                file_choice = input("Enter File Choice (1 or 2): ").strip()
+                
+                target_file = SELF_FILE if file_choice == "1" else NOTES_FILE
+                
+                new_key = input("Enter simple category keyword feature: ").strip().lower()
+                new_val = input("Enter the actual target answer data string: ").strip()
+
+                if new_key and new_val:
+                    with open(target_file, "a", encoding="utf-8") as file:
+                        file.write(f"\n{new_key}: {new_val}")
+                    print(f"✅ Securely injected parameter row into storage matrix.")
+                    print("🔄 Re-aligning mathematical configurations...")
+                    classifier, vectorizer, trained_answers, trained_keywords = train_and_serialize_model()
+                else:
+                    print("❌ Invalid empty fields detected. Operation rejected.")
+            else:
+                print("❌ Unknown execution code sequence. Type 1, 2, or 3.")

@@ -1,0 +1,9 @@
+name: My full name is Rahul Rajeshbhai Sharma.
+age: I am 20 years old, born on October 12, 2006.
+college: I am studying at Sutex Bank College of Computer Applications & Science, located in Amroli, Surat.
+course: I am pursuing a specialized BCA degree in Artificial Intelligence and Data Analytics.
+semester: I am currently in Semester 3, and I will enter Semester 4 next term.
+marks: I scored a CPI of 8.2 (82 percentage marks) in my last university semester exams.
+learning: I am currently learning Python programming, Machine Learning algorithms, and HTML/CSS web layout design.
+contact: You can email me at rahul.sharma@email.com or reach out via my student ID portal.
+hobbies: In my free time, I love building offline AI systems, writing clean python code, and reading machine learning documentations.
