@@ -1,0 +1,4 @@
+# Core Machine Learning Libraries for KnowFlow AI
+scikit-learn
+numpy
+matplotlib
