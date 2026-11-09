@@ -1,4 +1,4 @@
-# KnowFlow AI — Holiday Hacking & Personal AI Playground
+# DashaMind AI — Holiday Hacking & Personal AI Playground
 
 A self-contained, offline Natural Language Processing (NLP) playground built purely for personal experimentation, holiday fun, and coding self-improvement. 
 
@@ -11,7 +11,7 @@ This engine runs entirely on local machine hardware with zero external API depen
 To keep developer maintenance effortless and lightweight, all unnecessary components (`self.text` and `main.py`) have been removed. The repository operates out of a single clean runtime space:
 
 ```text
-📂 KnowFlow AI                         <-- Primary Root Project Folder
+📂 DashaMind AI                        <-- Primary Root Project Folder
    ├── 📂 .venv                        <-- Hidden Python Virtual Environment Directory
    ├── .gitignore                      <-- Active Git Exclusion Configuration Rules
    ├── install.txt                     <-- Automated Package Dependency List
