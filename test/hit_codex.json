@@ -1,0 +1,523 @@
+{
+  "codex_meta": {
+    "name": "Hit Codex",
+    "version": "1.0",
+    "created": "2026-11-11",
+    "language": "English (simple). The bot can also understand some Hindi/Gujarati words.",
+    "purpose": "One file that combines emotions and the inner mind, human conversation style, thinking and research habits, self-building (learning plan), resources, and the Maa Khodal Cutlery Shop chatbot data.",
+    "how_to_use": [
+      "Keep hit_codex.json and codex_bot.py in the same folder.",
+      "Run: python codex_bot.py",
+      "Type a message. Type 'help' to see topics, 'quit' to stop.",
+      "To change what the bot knows, edit this JSON file only. No code change is needed."
+    ],
+    "note": "Video and website links come from earlier searches and your own pasted pages. They were not watched or checked one by one. Open each link once to confirm it is right for you."
+  },
+
+  "owner": {
+    "name": "Hit Galani",
+    "role": "Learner and builder",
+    "goal": "Learn programming and AI step by step and build my own AI chatbot and AI agent.",
+    "first_project": "Chatbot for Maa Khodal Cutlery Shop",
+    "motto": "Never give up. Keep learning. Just do it."
+  },
+
+  "principles": [
+    "I am a learner. Mistakes are normal and are part of learning.",
+    "Never guess facts. If I do not know, I say so and check.",
+    "Small steps every day beat big plans that never start.",
+    "Be kind to people and to myself.",
+    "Keep secrets (API keys, passwords) out of GitHub."
+  ],
+
+  "emotions_and_mind": {
+    "intro": "Ten inner forces in two groups. The six Shadripu are inner enemies. The four Antahkarana are the tools of the inner mind. Meanings differ slightly between schools and teachers. These are beginner-friendly meanings for self-reflection.",
+    "shadripu": [
+      {
+        "id": "kama",
+        "name": "Kama",
+        "english": "Desire / craving",
+        "meaning": "Strong wanting: 'I must have this.' It is more than lust. It is any craving.",
+        "signs": ["Cannot stop checking the phone", "Always wanting new things", "Unhappy until you get something"],
+        "keywords": ["craving", "i want", "i need it", "cannot stop", "desire", "addicted", "tempted", "kama", "iccha"],
+        "harm": "One desire ends and a new one starts, so peace never comes.",
+        "remedy": {
+          "quality": "Contentment (Santosha)",
+          "actions": ["Ask: do I need this or only want it?", "Wait 24 hours before buying something you crave.", "Write 3 things you already have."]
+        },
+        "reply": "It sounds like a strong wish is pulling at you. That is Kama, desire. Wanting is human. The trick is to ask: do I need this, or do I only want it? Try waiting 24 hours before you act. What are you wanting right now?"
+      },
+      {
+        "id": "krodha",
+        "name": "Krodha",
+        "english": "Anger",
+        "meaning": "A hot, fast reaction when something blocks what we want or hurts our pride.",
+        "signs": ["Shouting or rude words", "Slamming things", "Feeling sorry afterwards"],
+        "keywords": ["angry", "anger", "furious", "mad", "irritated", "annoyed", "rage", "hate", "gussa", "gusso", "krodha"],
+        "harm": "Anger makes us say and do things we cannot take back. It hurts us first.",
+        "remedy": {
+          "quality": "Forgiveness (Kshama) and patience",
+          "actions": ["Pause. Take 10 slow breaths.", "Drink water or walk for 5 minutes.", "Talk about it only after you calm down."]
+        },
+        "reply": "I can hear the anger, and it makes sense to feel it. That is Krodha. Before you react, pause and take 10 slow breaths. Drink some water. You can talk about it once the heat goes down. What happened?"
+      },
+      {
+        "id": "moha",
+        "name": "Moha",
+        "english": "Delusion / unhealthy attachment",
+        "meaning": "Confusion and clinging. Thinking the temporary is permanent, or holding on so tightly we cannot see clearly.",
+        "signs": ["Cannot let go of old things or old hurts", "Bad choices because of attachment", "Depending on one person's opinion"],
+        "keywords": ["cannot let go", "can't let go", "attached", "attachment", "miss the past", "confused about", "moh", "moha"],
+        "harm": "It blocks clear thinking, so we cannot see the truth.",
+        "remedy": {
+          "quality": "Clear thinking (Viveka)",
+          "actions": ["Ask: what is real, and what is only my fear or habit?", "Let go slowly, one small thing at a time.", "Love without controlling."]
+        },
+        "reply": "It sounds like you are holding on very tightly to something. That is Moha, attachment. Holding on is natural, but it can cloud our thinking. Try asking: what is real here, and what is only fear or habit? What are you finding hard to let go of?"
+      },
+      {
+        "id": "lobha",
+        "name": "Lobha",
+        "english": "Greed",
+        "meaning": "Wanting more than we need and never feeling 'enough'.",
+        "signs": ["Collecting more and more", "Taking more than your share", "Never satisfied with what you have"],
+        "keywords": ["greedy", "greed", "not enough", "want more", "never satisfied", "lalach", "lobh", "lobha"],
+        "harm": "Greed makes us anxious and sometimes dishonest. A full cup still feels empty.",
+        "remedy": {
+          "quality": "Giving (Daan) and gratitude",
+          "actions": ["Share something small every week.", "Each night write 3 things you are grateful for.", "Set a clear 'enough' for money, time and things."]
+        },
+        "reply": "That feeling of 'never enough' is called Lobha, greed. Many of us feel it. Gratitude is a good medicine: tonight, write 3 things you already have. Sharing something small also helps. What do you feel is not enough?"
+      },
+      {
+        "id": "mada",
+        "name": "Mada",
+        "english": "Pride / vanity / arrogance",
+        "meaning": "Being 'drunk' on our own good points: money, looks, marks, strength, knowledge.",
+        "signs": ["Showing off", "Looking down on others", "Not listening because 'I already know'"],
+        "keywords": ["proud of myself", "better than", "show off", "arrogant", "ego trip", "ghamand", "mada"],
+        "harm": "A proud person stops learning, and people move away from them.",
+        "remedy": {
+          "quality": "Humility (Vinaya)",
+          "actions": ["Say 'I don't know' without fear.", "Learn something from everyone you meet.", "Remember that every skill came with help from others."]
+        },
+        "reply": "Feeling good about your effort is healthy. When it turns into 'I am better than others', it is Mada, pride. The cure is humility: stay curious, say 'I don't know' easily, and thank the people who helped you. Do you want to talk about what happened?"
+      },
+      {
+        "id": "matsarya",
+        "name": "Matsarya",
+        "english": "Envy / jealousy",
+        "meaning": "Pain when others succeed. Wishing others did not have what they have.",
+        "signs": ["Feeling bad about a friend's good news", "Comparing yourself on social media", "Hiding your happiness for others"],
+        "keywords": ["jealous", "jealousy", "envy", "envious", "compare myself", "comparing", "why not me", "jalan", "matsarya"],
+        "harm": "It poisons friendships and steals our own joy.",
+        "remedy": {
+          "quality": "Joy in others' happiness (Mudita)",
+          "actions": ["Say 'well done' and mean it.", "Compare yourself only with your own yesterday.", "Take a break from social media when you feel low."]
+        },
+        "reply": "Jealousy is a very human feeling. It is called Matsarya. Try this: congratulate the other person honestly, and compare yourself only with who you were yesterday. Your path is your own. Who are you comparing yourself with?"
+      }
+    ],
+    "antahkarana": [
+      {
+        "id": "manas",
+        "name": "Manas",
+        "english": "Thinking, wavering mind",
+        "job": "Takes in what the senses bring and produces thoughts, wishes and doubts.",
+        "goes_wrong": "Overthinking, distraction, doubt, a mind that follows every wish.",
+        "train": ["5 minutes of quiet breathing every day", "Do one thing at a time", "Less phone scrolling"],
+        "keywords": ["overthinking", "overthink", "distracted", "cannot focus", "can't focus", "restless mind", "too many thoughts", "doubt", "manas"],
+        "reply": "A busy, jumping mind is Manas at work. It is normal. Try 5 minutes of slow breathing, and do just one thing at a time for the next hour. Which thought keeps coming back?"
+      },
+      {
+        "id": "buddhi",
+        "name": "Buddhi",
+        "english": "Intellect / wisdom / decision",
+        "job": "Understands, judges and decides. It separates right from wrong and real from unreal.",
+        "goes_wrong": "Using clever thinking to excuse a wrong choice, or knowledge without good values.",
+        "train": ["Read and ask questions", "Reflect each night: what did I do well, what can I improve?", "Keep good company"],
+        "keywords": ["decision", "decide", "cannot decide", "can't decide", "right or wrong", "what should i do", "wisdom", "buddhi"],
+        "reply": "Making a choice is the work of Buddhi, your inner judge. Slow down and write the options on paper: what is good and bad about each? Ask what you would advise a friend. What are you trying to decide?"
+      },
+      {
+        "id": "chitta",
+        "name": "Chitta",
+        "english": "Memory / store of impressions (deep consciousness)",
+        "job": "The storehouse. It keeps memories, habits and old impressions, including those we do not remember on purpose.",
+        "goes_wrong": "Old hurts and fears keep controlling today's behaviour.",
+        "train": ["Build good habits on purpose because repetition teaches the storehouse", "Write a journal", "Practice forgiveness"],
+        "keywords": ["old memory", "bad habit", "habit", "memories", "past hurt", "trauma", "subconscious", "chitta"],
+        "note": "Chitta is memory and impressions, not willpower. Willpower is mostly Buddhi (deciding) with a trained Manas (following).",
+        "reply": "Habits and old memories live in Chitta, the inner storehouse. The good news is that it learns by repetition. Small good habits, done daily, slowly change it. Writing a short journal can also help. Which habit would you like to change?"
+      },
+      {
+        "id": "ahamkara",
+        "name": "Ahamkara",
+        "english": "Ego / sense of 'I'",
+        "job": "Creates the feeling 'I am this person, and this is mine.'",
+        "goes_wrong": "Ego turns into pride (Mada), jealousy (Matsarya) and anger (Krodha) when 'I' is touched.",
+        "train": ["Notice the words 'I' and 'mine'", "Thank others", "Do work for good, not only for credit"],
+        "keywords": ["ego", "my pride hurt", "insulted", "disrespected", "i did it", "self-importance", "ahamkara", "ahankar"],
+        "reply": "When we feel hurt or disrespected, the sense of 'I' is often involved. That is Ahamkara, the ego. Notice the words 'I' and 'mine' in your thoughts, and ask if the situation is really as big as it feels. What happened?"
+      }
+    ],
+    "chain_from_bhagavad_gita_2_62_2_63": [
+      "Thinking again and again about something (Manas)",
+      "Attachment",
+      "Desire (Kama)",
+      "Anger (Krodha) when desire is blocked",
+      "Delusion (Moha)",
+      "Memory confused (Chitta)",
+      "Intellect lost (Buddhi)",
+      "Fall"
+    ],
+    "chain_lesson": "Fix the problem at the start (what we keep thinking about). It is much easier than fixing anger at the end.",
+    "chariot_katha_upanishad": {
+      "chariot": "The body",
+      "horses": "The senses",
+      "reins": "Manas (mind)",
+      "charioteer": "Buddhi (intellect)",
+      "rider": "The Self (Atman)"
+    },
+    "other_verses_to_read": ["Gita 3.37", "Gita 16.21", "Gita 6.5", "Gita 6.35"],
+    "daily_practice": {
+      "morning": "Sit quietly for 3 minutes. Take 10 slow breaths. Pick one quality to work on today.",
+      "during_the_day": "When a feeling like anger, desire or envy comes, name it silently ('This is Krodha'). Pause for 3 breaths before you react.",
+      "night": "Write 3 lines: what went well, which enemy showed up, what I will try tomorrow. Write 1 thing you are grateful for."
+    },
+    "general_emotions": [
+      {
+        "id": "stress",
+        "keywords": ["stressed", "stress", "anxious", "anxiety", "worried", "worry", "nervous", "tension", "panic"],
+        "reply": "That sounds heavy, and I am glad you said it out loud. Let us make it smaller. Take 5 slow breaths: in for 4 counts, out for 6. Then write down the one next step you can take today. Do you want to tell me what is worrying you?"
+      },
+      {
+        "id": "sad",
+        "keywords": ["sad", "unhappy", "crying", "cry", "depressed", "down", "low", "hopeless"],
+        "reply": "I am sorry you are feeling this way. Your feelings are real and they matter. If you can, talk with someone you trust today, or take a short walk outside. You do not have to carry it alone. Would you like to tell me more?"
+      },
+      {
+        "id": "tired",
+        "keywords": ["tired", "exhausted", "burnout", "burnt out", "sleepy", "no energy", "thak gaya"],
+        "reply": "Rest is part of learning, not the opposite of it. Sleep 7 hours, drink water, and take a short break from the screen. Tomorrow is a fresh start. Is something else draining you too?"
+      },
+      {
+        "id": "lonely",
+        "keywords": ["lonely", "alone", "no friends", "nobody understands"],
+        "reply": "Feeling alone is painful. Thank you for telling me. Try reaching out to one person today, even with a small message like 'How are you?'. Joining a study group or an online learning community can also help. What would feel easiest as a first step?"
+      },
+      {
+        "id": "lazy",
+        "keywords": ["lazy", "procrastinate", "procrastinating", "no motivation", "unmotivated", "bored", "can't start", "cannot start"],
+        "reply": "Starting is the hardest part for everyone. Use the 5-minute rule: set a timer for 5 minutes and do the smallest piece. Most times you will keep going. What is the smallest step you could do right now?"
+      },
+      {
+        "id": "happy",
+        "keywords": ["happy", "excited", "proud", "great news", "i did it", "i passed", "finished", "completed"],
+        "reply": "That is wonderful, congratulations! Take a moment to enjoy it. Write it in your progress log, and if it is a big step, you can tag it in Git. What did you achieve?"
+      },
+      {
+        "id": "confused",
+        "keywords": ["confused", "stuck", "don't understand", "do not understand", "lost", "overwhelmed"],
+        "reply": "Being stuck means you are at the edge of learning, which is a good place to be. Break the problem into the smallest part you do understand, then ask one clear question about the next part. Which part is unclear?"
+      }
+    ]
+  },
+
+  "safety": {
+    "rule": "The bot is a learning and reflection helper. It is not a doctor, therapist or emergency service.",
+    "crisis_keywords": ["suicide", "kill myself", "end my life", "want to die", "self harm", "self-harm", "hurt myself", "don't want to live", "do not want to live", "marna chahta"],
+    "crisis_reply": "I am really sorry you are in so much pain, and I am glad you told me. Please contact someone right now: if you are in immediate danger, call 112 (India emergency number). You can also call Tele-MANAS, the government mental health helpline, at 14416 (free, 24 hours), or reach a trusted person near you and stay with them. You deserve support, and you do not have to go through this alone.",
+    "helpline_note": "Please verify helpline numbers for your country or state, because numbers can change.",
+    "other_rules": [
+      "Never give a medical diagnosis.",
+      "If strong anger, sadness or worry keeps affecting daily life, suggest talking to a trusted person or a counsellor.",
+      "Never invent shop prices, stock or delivery promises."
+    ]
+  },
+
+  "conversation_style": {
+    "tone": ["warm", "polite", "simple", "honest", "calm"],
+    "language_rules": [
+      "Use simple English with short sentences.",
+      "If the person writes in Hindi or Gujarati, answer in the same language when possible.",
+      "Do not use difficult words. Explain a new word the first time it appears.",
+      "Match the person's mood: casual if they are casual, gentle if they are upset."
+    ],
+    "reply_length": "2 to 5 sentences for normal chat. Longer only when the person asks for detail.",
+    "human_reply_pattern": [
+      "1. Acknowledge the feeling or question first.",
+      "2. Say it in your own words (reflect).",
+      "3. Give one small, useful help.",
+      "4. Ask one gentle question or give one next step."
+    ],
+    "do": [
+      "Say 'I don't know' when you do not know.",
+      "Ask one question at a time.",
+      "Celebrate small wins.",
+      "Offer to help with the next step."
+    ],
+    "dont": [
+      "Do not lecture or judge.",
+      "Do not guess prices, facts or promises.",
+      "Do not give medical or legal advice.",
+      "Do not use many bullet points in emotional chats. Use plain, kind sentences."
+    ],
+    "greetings": ["Hello! How can I help you today?", "Hi! What would you like to learn or ask today?"],
+    "fallback": "I am not sure I understood. Could you say it in a different way? You can type 'help' to see what I can talk about.",
+    "goodbye": "Take care! Keep learning, and come back anytime.",
+    "examples": [
+      {"user": "I am so angry with my friend.", "bot": "I can hear the anger, and it makes sense to feel it. Before you react, take 10 slow breaths. What happened?"},
+      {"user": "What is the delivery charge?", "bot": "The delivery charge is decided after the order, based on your location and order amount. The owner will call you first to confirm."},
+      {"user": "I cannot start studying.", "bot": "Starting is the hardest part for everyone. Try a 5-minute timer and do the smallest piece. What is the first small step?"}
+    ]
+  },
+
+  "thinking_and_research": {
+    "thinking_steps": [
+      "1. Understand: what exactly is the question or goal?",
+      "2. Break it down: split it into small parts.",
+      "3. Gather: find facts from good sources.",
+      "4. Try: build or test the smallest working version.",
+      "5. Check: compare the result with the goal and fix mistakes.",
+      "6. Reflect: write what I learned in my own words."
+    ],
+    "research_rules": [
+      "Prefer official docs and well-known courses over random posts.",
+      "Check the date. Libraries and model names change often.",
+      "Use at least two sources for important facts.",
+      "Write down the source link in notes.",
+      "For things that change (prices, rules, versions), look them up again before using them."
+    ],
+    "debugging_method": [
+      "Read the error message fully.",
+      "Find the line number.",
+      "Search the error text.",
+      "Ask an AI to explain the error, not to write everything.",
+      "Change one thing at a time and test again."
+    ],
+    "question_templates": [
+      "What am I trying to do?",
+      "What did I expect, and what happened instead?",
+      "What have I already tried?",
+      "What is the smallest example that shows the problem?"
+    ],
+    "stuck_rule": "If stuck for 20 minutes: read the error, search it, then ask for an explanation."
+  },
+
+  "self_build": {
+    "goal": "Build my own AI chatbot and AI agent on my own website using code.",
+    "path": "Python -> HTML/CSS/JavaScript -> Flask -> SQL -> AI API and prompts -> search (RAG) -> image matching -> AI agent with tools -> deploy.",
+    "study_time": "5 to 6 hours a day, 6 days a week. Sunday: rest and 1 hour of light revision.",
+    "total_plan": "12 weeks main course, then an optional advanced track (weeks 13 to 16).",
+    "phases": [
+      {"weeks": "1-2", "name": "Python", "topics": ["variables", "if/loops", "functions", "files and JSON", "classes", "venv and pip", "requests"], "weekly_project": "Console bot that answers from the shop file"},
+      {"weeks": "3-4", "name": "Website basics", "topics": ["HTML", "CSS", "JavaScript", "fetch and DOM"], "weekly_project": "Shop page and chat box UI"},
+      {"weeks": "5", "name": "Tools", "topics": ["Git and GitHub", "terminal", "HTTP and REST", ".env and API keys", "data structures"], "weekly_project": "Chat page on GitHub Pages"},
+      {"weeks": "6-7", "name": "Backend and database", "topics": ["Flask", "SQL and SQLite"], "weekly_project": "Flask app and owner admin page for price and stock"},
+      {"weeks": "8-10", "name": "AI chatbot", "topics": ["LLM basics", "API and prompts", "RAG", "image matching"], "weekly_project": "Chatbot v1, v2, v3"},
+      {"weeks": "11-12", "name": "Agent and launch", "topics": ["tool use", "logging", "safety", "deploy", "security"], "weekly_project": "Agent with tools and live website"}
+    ],
+    "timetable": {
+      "morning": [
+        ["05:30-06:00", "Wake up, water, light walk"],
+        ["06:00-06:50", "Period 1: theory (video 1, notes)"],
+        ["07:00-07:50", "Period 2: theory (video 2 or docs)"],
+        ["08:30-09:20", "Period 3: practical (code along)"],
+        ["09:30-10:20", "Period 4: practical (rebuild from memory)"],
+        ["10:30-11:20", "Period 5: project work"],
+        ["11:20-11:50", "Period 6: revision, notes, GitHub commit"]
+      ],
+      "night": [
+        ["18:00-18:50", "Period 1: theory"],
+        ["19:00-19:50", "Period 2: theory"],
+        ["20:30-21:20", "Period 3: practical"],
+        ["21:30-22:20", "Period 4: practical"],
+        ["22:30-23:20", "Period 5: project work"],
+        ["23:20-23:50", "Period 6: revision, commit, plan tomorrow"]
+      ]
+    },
+    "study_rules": [
+      "Never only watch. Watch 10 minutes, then pause and type the same code.",
+      "After a lesson, close the video and rebuild it from memory.",
+      "Take notes in my own words.",
+      "Commit to GitHub every day.",
+      "If I already know a topic, take that week's test first. 80% or more means skip ahead.",
+      "Sleep 7 hours and take breaks."
+    ],
+    "weekly_test": "Every Saturday, 1 hour: 10 written questions plus 1 coding task. Score 80% or more to move on.",
+    "daily_checklist": ["Watched today's theory (with notes)", "Coded along", "Rebuilt from memory", "Worked on the shop project", "Committed to GitHub", "Wrote tomorrow's plan", "Slept on time"],
+    "repo": {
+      "name": "Learning-Lab",
+      "tree": ["NeuralNine/README.md", "CS50/CS50 Artificial Intelligence with Python/", "CS50/CS50 Python/", "CS50/README.md", "venv/", "README.md", ".gitignore"],
+      "description": "My personal learning lab: Python, CS50 and NeuralNine tutorials, notes, progress, and AI chatbot projects.",
+      "topics": ["learning", "python", "cs50", "neuralnine", "ai", "chatbot", "flask", "beginner", "study-notes", "learning-in-public"]
+    },
+    "git_workflow": {
+      "first_commit": ["git init", "git add .", "git commit -m \"Initial commit: set up Learning Lab\""],
+      "connect_github": ["git branch -M main", "git remote add origin https://github.com/<your-username>/Learning-Lab.git", "git push -u origin main"],
+      "tag_meaning": "A commit saves work at one moment. A tag is a permanent name on one commit, like a milestone sticker. Tag name Ls1 means Learning Step 1 understood successfully.",
+      "tag_steps": [
+        "Edit the md files (progress table, what I can do now, change log).",
+        "git status",
+        "git add .",
+        "git commit -m \"Ls1: update progress and notes for Learning Step 1\"",
+        "git tag -a Ls1 -m \"Learning Step 1: understood setup and Python basics successfully\"",
+        "git push origin main",
+        "git push origin Ls1"
+      ],
+      "useful_commands": {
+        "list tags": "git tag",
+        "show one tag": "git show Ls1",
+        "view repo at Ls1": "git checkout Ls1",
+        "go back to latest": "git switch main",
+        "delete tag locally": "git tag -d Ls1",
+        "delete tag on GitHub": "git push origin --delete Ls1"
+      },
+      "naming": "Use Ls1, Ls2, Ls3. Tag names are case-sensitive.",
+      "tip": "Create a tag only after the commit, and only when I really understood something."
+    },
+    "faq": [
+      {"keywords": ["git tag", "tag", "ls1", "milestone"], "answer": "A Git tag is a permanent name on one commit, like a milestone sticker. Commit your work, then run: git tag -a Ls1 -m \"Learning Step 1 done\" and push it with: git push origin Ls1."},
+      {"keywords": ["commit", "git commit", "first commit"], "answer": "To save your work: git add . then git commit -m \"your message\". Use short clear messages like: Add Python lessons 1-3 notes."},
+      {"keywords": ["roadmap", "plan", "learning plan", "12 week", "where to start", "how to start"], "answer": "The plan has 12 weeks: Python (1-2), HTML/CSS/JS (3-4), Git and tools (5), Flask and SQL (6-7), AI chatbot (8-10), AI agent and launch (11-12). Start today with setup and Python Beginner lesson 1."},
+      {"keywords": ["timetable", "schedule", "morning", "night", "daily routine"], "answer": "Pick the morning timetable (05:30 to 11:50) or the night timetable (18:00 to 23:50). Both give 5.5 hours: 2 theory periods, 2 practical periods, 1 project period and 1 revision period, with breaks."},
+      {"keywords": ["video", "videos", "playlist", "resources", "learn python", "tutorial"], "answer": "Start with the NeuralNine Python Beginner playlist (https://www.youtube.com/playlist?list=PL7yh-TELLS1E6dNCzfQl-NG-KJP3C-4mc). Backup: the freeCodeCamp Python course (https://www.youtube.com/watch?v=rfscVS0vtbw). All other links are in the 'resources' section of hit_codex.json."},
+      {"keywords": ["chatbot", "build chatbot", "ai chatbot", "agent"], "answer": "A website chatbot works like this: the website page sends the message to your Python (Flask) server, the server asks an AI model through an API with your shop file as the rules, and the answer goes back to the page. Keep the API key only on the server."},
+      {"keywords": ["api key", "secret", "env", "password"], "answer": "Never put an API key in website code or on GitHub. Store it in a .env file, load it with python-dotenv, and add .env to .gitignore."}
+    ]
+  },
+
+  "resources": {
+    "note": "Links come from earlier searches and pasted pages. Not all were verified by watching or opening. Check each once.",
+    "courses": [
+      {"title": "CS50's Introduction to Programming with Python", "type": "course", "url": "https://cs50.harvard.edu/python"},
+      {"title": "CS50's Introduction to Artificial Intelligence with Python", "type": "course", "url": "https://cs50.harvard.edu/ai"}
+    ],
+    "youtube_channels": [
+      {"title": "NeuralNine", "url": "https://www.youtube.com/@NeuralNine"}
+    ],
+    "youtube_playlists": [
+      {"title": "NeuralNine: Python Beginner Tutorial (10 lessons)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1E6dNCzfQl-NG-KJP3C-4mc"},
+      {"title": "NeuralNine: Python Intermediate Tutorial (11 lessons)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1F3KytMVZRFO-xIo_S2_Jg1"},
+      {"title": "NeuralNine: Python Tips and Tricks (16 lessons)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1GNyuvPsFEqb7JVMEUTtuau"},
+      {"title": "NeuralNine: Python Advanced Tutorials (10 lessons)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FuqLSjl5bgiQIEH25VEmIc"},
+      {"title": "NeuralNine: Data Structures in Python (9 videos)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1Gs3PjmhXTXh1FdpGg6iing"},
+      {"title": "NeuralNine: Linux (9 videos)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FRoV4TCJjyEwh_Ye1o9sik"},
+      {"title": "NeuralNine: Flask Tutorial Series (10 lessons)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1EyAye_UMnlsTGKxg8uatkM"},
+      {"title": "NeuralNine: SQL Tutorial Series (6 lessons)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FVLG6AFoT-3lVcbJiPTWze"},
+      {"title": "NeuralNine: Python AI Projects (54 videos)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1G9mmnBN3ZSY8hYgJ5kBOg-"},
+      {"title": "NeuralNine: Python Data Science Tutorial (17 lessons, optional)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1FfO5Q8KHK31VgsrcnWcTAk"},
+      {"title": "NeuralNine: Python Machine Learning Tutorial (8 lessons, optional)", "url": "https://www.youtube.com/playlist?list=PL7yh-TELLS1EZGz1-VDltwdwZvPV-jliQ"}
+    ],
+    "youtube_videos": [
+      {"title": "freeCodeCamp: Learn Python - Full Course for Beginners (about 4.5 hours)", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw"},
+      {"title": "Botpress: Building a basic bot (step by step)", "url": "https://youtu.be/nzlni00lOSQ"},
+      {"title": "Chatbot with Python, Flask and Gemini API", "url": "https://youtu.be/CqfKk_JjuEo"}
+    ],
+    "botpress_playlists": [
+      {"title": "Botpress 101", "url": "https://www.youtube.com/playlist?list=PLlJHGGklthGlUVZlNhG5I0ZK8u1h6UfZ9"},
+      {"title": "Botpress Dictionary", "url": "https://www.youtube.com/playlist?list=PLlJHGGklthGl1aRSV3LSaAnSwcO3xhBq6"}
+    ],
+    "docs": [
+      {"title": "MDN: Learn web development", "url": "https://developer.mozilla.org/en-US/docs/Learn"},
+      {"title": "Flask documentation", "url": "https://flask.palletsprojects.com"},
+      {"title": "FastAPI tutorial: first steps", "url": "https://fastapi.tiangolo.com/tutorial/first-steps/"},
+      {"title": "Claude API quickstart", "url": "https://platform.claude.com/docs/en/get-started"},
+      {"title": "Claude API: Messages", "url": "https://platform.claude.com/docs/en/api/messages/create"},
+      {"title": "Prompting best practices", "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview"}
+    ],
+    "articles": [
+      {"title": "Chatbase: how to build an AI chatbot", "url": "https://www.chatbase.co/blog/how-to-build-ai-chatbot"},
+      {"title": "DataCamp: Botpress tutorial", "url": "https://www.datacamp.com/tutorial/botpress"},
+      {"title": "WhatsApp auto reply setup", "url": "https://www.eesel.ai/blog/whatsapp-auto-reply"},
+      {"title": "WhatsApp Business catalog guide", "url": "https://www.quickreply.ai/blog/how-to-create-a-whatsapp-business-catalog"},
+      {"title": "Chatbot with Python, HTML, JS (written guide)", "url": "https://medium.com/@lijinlar/building-your-first-chatgpt-api-based-chatbot-with-python-html-javascript-and-css-d2a27afd921e"},
+      {"title": "Deploy a Python app on Render (free tier)", "url": "https://medium.com/@doriansotpyrc/how-to-deploy-your-python-app-on-render-free-tier-step-by-step-guide-6df83a95525d"}
+    ],
+    "books_for_the_inner_mind": ["Bhagavad Gita (use a reliable translation)", "Katha Upanishad"]
+  },
+
+  "shop_chatbot": {
+    "business": {
+      "name": "Maa Khodal Cutlery Shop",
+      "type": "Small shop run by one woman owner (not a family business)",
+      "owner": "Hetal Ben Galani",
+      "main_products": ["Cutlery", "Hosiery", "Imitation (artificial jewellery)", "Nadas (drawstring cords)"],
+      "side_products": ["Dry fruits (kaju, pista, badam and others)", "Sindhav Mithu (rock salt)", "Red chilli powder packets (2 types)", "Other small mixed items"],
+      "history": "Started in 2015 from home. In 2023 took a shop and moved all goods from home to the shop. About 10 years of service.",
+      "location": "Near Opera Prince, Opera Royal, Bhinde (confirm spelling) and Pasodara Patiya, Surat. Full address and map link: TO BE ADDED."
+    },
+    "rules": [
+      "Answer only from this data. Never make up prices, stock, offers or delivery promises.",
+      "If the answer is not here, say: Please call the shop owner, and give the contact numbers.",
+      "Never tell shop timing until it is added. Say: Please call the owner to confirm the timing.",
+      "Delivery goes only inside the college route and time, and only for orders between Rs 600 and Rs 1000.",
+      "The owner calls the customer first and confirms all details before delivery."
+    ],
+    "delivery": {
+      "available": "Sometimes, not always. Depends on the delivery person's college time.",
+      "college": "Sutex Bank College, Amroli",
+      "chances": ["On the way TO college (around 10:00 AM)", "On the way BACK from college (around 5:00 PM)"],
+      "areas": ["Opera Prince to Pasodara", "Walking distance around Pasodara Patiya", "Sometimes Kapodara", "Inside areas: Varachha, Vastu, VIP road etc."],
+      "outside_areas": false,
+      "min_order_rs": 600,
+      "max_order_rs": 1000,
+      "charge": "Decided after the order, based on location and order amount."
+    },
+    "contacts": {
+      "main": {"name": "Hetal Ben Galani (Owner)", "phone": "78742 xxxxx"},
+      "fallback": [
+        {"name": "Dipakbhai Galani", "phone": "81416 xxxxx"},
+        {"name": "Hit Galani", "phone": "84015 xxxxx"}
+      ],
+      "note": "Numbers are masked. Fill in the full numbers before going live."
+    },
+    "product_list": [
+      {"id": "P001", "name": "EXAMPLE - replace with real product", "category": "Cutlery", "price_rs": null, "available": null, "image_file": "p001.jpg"}
+    ],
+    "faq": [
+      {"keywords": ["sell", "products", "what do you have", "items", "stock of"], "answer": "We sell cutlery, hosiery, imitation jewellery and nadas. We also sell dry fruits like kaju, pista and badam, sindhav mithu, and red chilli powder packets."},
+      {"keywords": ["delivery", "deliver", "home delivery", "courier"], "answer": "Sometimes. Delivery is possible only on our college route and time: on the way to college (around 10 AM) or on the way back (around 5 PM), in inside areas like Opera Prince to Pasodara, Varachha, Vastu and VIP road. Order should be Rs 600 to Rs 1000. The owner will call you first to confirm everything."},
+      {"keywords": ["minimum order", "maximum order", "order amount", "min order"], "answer": "For delivery, the order should be at least Rs 600 and at most Rs 1000."},
+      {"keywords": ["delivery charge", "delivery fee", "charge"], "answer": "The delivery charge is decided after the order, based on your location and order amount. The owner will call you first to confirm."},
+      {"keywords": ["price", "cost", "how much", "rate", "kitna"], "answer": "I do not have a confirmed price list yet, and I never guess prices. Please call the owner at 78742 xxxxx to confirm the price."},
+      {"keywords": ["available", "availability", "in stock"], "answer": "I cannot confirm stock right now. Please call the owner at 78742 xxxxx to check if the product is available."},
+      {"keywords": ["where", "address", "location", "shop located", "find your shop"], "answer": "The shop is near Opera Prince, Opera Royal and Pasodara Patiya, Surat. The full address and map link will be added soon."},
+      {"keywords": ["owner", "who runs", "who owns", "hetal"], "answer": "The shop is run by Hetal Ben Galani. She handles the whole shop herself."},
+      {"keywords": ["since when", "how long", "history", "started"], "answer": "We started in 2015 from home. Since 2023 we have our own shop."},
+      {"keywords": ["timing", "timings", "open", "close", "opening time", "closing time"], "answer": "Please call the owner to confirm the shop timing."},
+      {"keywords": ["return", "exchange", "refund", "not good", "damaged", "wrong product"], "answer": "If something is not perfect, please tell us what is wrong. We will check and change it."},
+      {"keywords": ["contact", "phone", "number", "call"], "answer": "Call 78742 xxxxx. If it is not reachable, call 81416 xxxxx or 84015 xxxxx."},
+      {"keywords": ["outside area", "outside delivery", "far away"], "answer": "Sorry, we deliver only in inside areas on our route."},
+      {"keywords": ["how to order", "place order", "buy"], "answer": "Tell us the product (name or photo). We will confirm price and availability. Check the product properly, and when everything is perfect you can buy it at the shop. For delivery, the owner will call you first to confirm."}
+    ],
+    "to_be_added": ["Shop opening and closing time", "Full address and map link", "Product list with images, prices and availability", "Return and refund days", "Delivery charge amount", "Full phone numbers", "Offers and festival discounts"]
+  },
+
+  "code": {
+    "file": "codex_bot.py",
+    "needs": "Python 3.8 or newer. No extra libraries.",
+    "run": "python codex_bot.py",
+    "demo": "python codex_bot.py --demo",
+    "how_it_works": [
+      "Load this JSON file.",
+      "Read the message and make it lowercase.",
+      "Check the safety words first.",
+      "Find the best match among shop FAQs, learning FAQs, mind words and general emotions.",
+      "Print the matching reply, or the fallback message."
+    ],
+    "next_steps": [
+      "Replace keyword matching with an AI API call, using this JSON as the system prompt or knowledge.",
+      "Add a Flask route /chat that calls the same reply function.",
+      "Add the real product list, prices and image matching for the shop."
+    ]
+  },
+
+  "future_updates": [
+    "Add real shop timing and full phone numbers.",
+    "Add the real product list with prices and availability.",
+    "Add more videos and notes as I learn.",
+    "Update progress and tag milestones (Ls1, Ls2, Ls3)."
+  ]
+}
